@@ -1,0 +1,33 @@
+---
+title       : Test deck 
+subtitle    : Subtitle
+author      : Inés Vidal 
+job         : Student
+framework   : shower        # {io2012, html5slides, shower, dzslides, ...}
+highlighter : highlight.js  # {highlight.js, prettify, highlight}
+hitheme     : tomorrow      # 
+widgets     : [mathjax]     # {mathjax, quiz, bootstrap}
+mode        : selfcontained # {standalone, draft}
+knit        : slidify::knit2slides
+---
+
+## Read-And-Delete
+
+1. Edit YAML front matter
+2. Write using R Markdown
+3. Use an empty line followed by three dashes to separate slides!
+4. modificado por min
+
+--- .class #id 
+
+## Slide 2
+* 1st
+* 2nd
+* formula: $$\frac{-b\pm \sqrt{b^2 - 4ac}}{2a}$$
+
+```{r,eval=TRUE}
+```
+
+--- .class #id 
+
+
