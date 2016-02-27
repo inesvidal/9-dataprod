@@ -7,9 +7,6 @@ require(randomForest)
 require(ggplot2)
 # begin shiny server 
 shinyServer(function(input, output) {
-    
-    ## Example 1 Facetted Scatterplot
-    
     # read input variables
     petallength <- reactive({input$petallength})
     sepalwidth <- reactive({input$sepalwidth})
@@ -43,30 +40,8 @@ shinyServer(function(input, output) {
     ## return the input values
     output$sepalwidth <- sepalwidth
     output$petallength <- petallength
-    
-    #tests
-    #     output$fit <- renderPrint({head(fit,1)})    
-    #     output$test <- renderPrint({test()})
-    #     output$pred <- renderPrint({pred()})
-    #     output$final <- renderPrint({final()})
     output$acc <- renderPrint({round(acc*100,2)})
     output$species <- renderText({as.character(final()$Species)})
-    
-#     
-#     library(caret)
-#     x <- iris
-#     pca <- prcomp(log(iris[,1:4]), center = TRUE, scale = TRUE)
-#     summary(pca)
-#     
-#     
-#     preProc <- preProcess(x, method="pca", thresh =.95) # calculate PCs for training data
-    #     train_pca <- predict(preProc, x)
-    #     # run model on outcome and principle components
-    #     fit_pca_rf <- train(y ~ ., data = train_pca, method = "rf") # calculate PCs for test data
-    #     test_pca_rf <- predict(preProc, t)
-    # compare results 
-    #acc_pca_rf <- confusionMatrix(t$classe, predict(fit_pca_rf, test_pca_rf))$overall[1]
-    
     
     output$myplot <- renderPlot({   
         
@@ -80,31 +55,4 @@ shinyServer(function(input, output) {
             geom_point(data = final_df, size = 3)
         
     })
-    #     r1$save('fig/r1.html', cdn = TRUE)
-    #     cat('<iframe src="fig/r1.html" width=100%, height=600></iframe>')
-    
-    ############ DEL EJEMPLO
-    #     # define reactive parameters
-    #     pop<- reactive({sample(1:20, input$population, replace = TRUE)})
-    #     bootstrapSample<-reactive({sample(pop(),input$sampleSize*input$numSample,
-    #                                       replace = TRUE)})
-    #     popVar<- reactive({round(var(pop()),2)})
-    #     # print text through reactive funtion
-    #     output$biaVar <- renderText({
-    #         sample<- as.data.frame(matrix(bootstrapSample(), nrow = input$numSample,
-    #                                       ncol =input$sampleSize))
-    #         return(round(mean(rowSums((sample-rowMeans(sample))^2)/input$sampleSize), 2))
-    #     })
-    #     # google visualization histogram
-    #     output$popHist <- renderGvis({
-    #         popHist <- gvisHistogram(data.frame(pop()), options = list(
-    #             height = "300px",
-    #             legend = "{position: 'none'}", title = "Population Distribution",
-    #             subtitle = "samples randomly drawn (with replacement) from values 1 to 20",
-    #             histogram = "{ hideBucketItems: true, bucketSize: 2 }",
-    #             hAxis = "{ title: 'Values', maxAlternation: 1, showTextEvery: 1}",
-    #             vAxis = "{ title: 'Frequency'}"
-    #         ))
-    #         return(popHist)
-    #     })
 })
