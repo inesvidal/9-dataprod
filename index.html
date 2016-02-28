@@ -1,92 +1,185 @@
-<!DOCTYPE HTML>
-<html lang="en-US">
+<!DOCTYPE html>
+<html>
 <head>
-	<title>Test deck</title>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=1274, user-scalable=no">
-	<meta name="description" content="Test deck">
-	<meta name="author" content="Inés Vidal">
-	<meta name="generator" content="slidify" />
-	<!-- LOAD STYLE SHEETS -->
-	<link rel="stylesheet" href="libraries/frameworks/shower/themes/ribbon/styles/screen.css">
-	<link rel="stylesheet" media="print"
-	  href="libraries/frameworks/shower/themes/ribbon/styles/print.css">
-	<link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css">  
-	<!--
-		To apply styles to the certain slides
-		use slide ID to get needed elements
-		-->
-	<style>
-		#Cover h2 {
-      margin:65px 0 0;
-			color:#FFF;
-			text-align:center;
-			font-size:70px;
-			}
-		#FitToWidth h2,
-		#FitToHeight h2 {
-			color:#FFF;
-			text-align:center;
-			}
-	</style> 
-</head>
-<body class="list">
-  <header class="caption">
-  	<h1>Test deck</h1>
-	</header>
-  <section class="slide " id="slide-1">
-  <div>
-    <h2>Read-And-Delete</h2>
-    <ol>
-<li>Edit YAML front matter</li>
-<li>Write using R Markdown</li>
-<li>Use an empty line followed by three dashes to separate slides!</li>
-<li>modificado por min</li>
-</ol>
+  <title>Iris species prediction</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Iris species prediction">
+  <meta name="author" content="Inés Vidal">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="http://slidifylibraries2.googlecode.com/git/inst/libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="http://slidifylibraries2.googlecode.com/git/inst/libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="http://slidifylibraries2.googlecode.com/git/inst/libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="http://slidifylibraries2.googlecode.com/git/inst/libraries/highlighters/highlight.js/css/tomorrow.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="http://slidifylibraries2.googlecode.com/git/inst/libraries/widgets/interactive/css/aceeditor.css"></link>
 
-  </div>
-</section>
-<section class="slide class" id="id">
-  <div>
-    <h2>Slide 2</h2>
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="http://slidifylibraries2.googlecode.com/git/inst/libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="http://slidifylibraries2.googlecode.com/git/inst/libraries/frameworks/io2012/js/slides" 
+    src="http://slidifylibraries2.googlecode.com/git/inst/libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+  
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+        <slide class="title-slide segue nobackground">
+  <hgroup class="auto-fadein">
+    <h1>Iris species prediction</h1>
+    <h2>Datascience Specialization - Developing data products project</h2>
+    <p>Inés Vidal<br/>Student</p>
+  </hgroup>
+  <article></article>  
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="" id="slide-1" style="background:;">
+  <hgroup>
+    <h2>Ambition</h2>
+  </hgroup>
+  <article data-timings="">
     <ul>
-<li>1st</li>
-<li>2nd</li>
-<li>formula: \[\frac{-b\pm \sqrt{b^2 - 4ac}}{2a}\]</li>
+<li>My ShinyApp has been created to illustrate how prediction/classification works.</li>
+<li>I decided to work with the <a href="https://stat.ethz.ch/R-manual/R-devel/library/datasets/html/iris.html">&#39;Iris&#39; dataset</a>, and based on 2 main attributes for prediction, allow users to test how different flower dimensions (petal length and sepal width) would result in <em>Species</em> prediction.</li>
+<li>This mechanism helps experimenting how changing the inputs the prediction/classification changes, and therefore can be useful to help students approach prediction and model construction.</li>
 </ul>
 
-  </div>
-</section>
-<section class="slide class" id="id">
-  <div>
-    <h2>NA</h2>
-    
-  </div>
-</section>
-  <div class="progress">
-    <div></div>
-  </div>
-	<script src="libraries/frameworks/shower/shower.js"></script>
-	<!-- MathJax: Fall back to local if CDN offline but local image fonts are not supported (saves >100MB) -->
-	<script type="text/x-mathjax-config">
-	  MathJax.Hub.Config({
-	    tex2jax: {
-	      inlineMath: [['$','$'], ['\\(','\\)']],
-	      processEscapes: true
-	    }
-	  });
-	</script>
-	<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-	<!-- <script src="https://c328740.ssl.cf1.rackcdn.com/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-	</script> -->
-	<script>window.MathJax || document.write('<script type="text/x-mathjax-config">MathJax.Hub.Config({"HTML-CSS":{imageFont:null}});<\/script><script src="libraries/widgets/mathjax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"><\/script>')
-</script>
-<!-- LOAD HIGHLIGHTER JS FILES -->
-	<script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
-	<script>hljs.initHighlightingOnLoad();</script>
-	<!-- DONE LOADING HIGHLIGHTER JS FILES -->
-	 
-		<!-- Copyright © 2010–2012 Vadim Makeev — pepelsbey.net -->
-	<!-- Photos by John Carey — fiftyfootshadows.net -->
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-2" style="background:;">
+  <hgroup>
+    <h2>The approach:</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>The <em>iris dataset</em> contains 4 characteristics for 50 species of iris flowers. To ease graphic representation I selected two significative characteristics among the four available (Petal length and Sepal width). </li>
+<li>A PCA analysis of the dataset confirms that two components capture most of the variability.</li>
+<li>A random forest model predicts species using Petal length and Sepal width provides a 93% of accuracy.</li>
+</ul>
+
+<pre><code class="r">data(iris)
+inTrain &lt;- createDataPartition(y=iris$Species, times = 1, p=0.8,list = FALSE) 
+irisTrain &lt;- iris[inTrain,]
+irisTest &lt;- iris[-inTrain,] 
+irisFit &lt;- randomForest(Species ~ Petal.Length + Sepal.Width, data = irisTrain) 
+confusionMatrix(irisTest$Species, predict(irisFit, irisTest[1:4]))$overall[1]
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-3" style="background:;">
+  <hgroup>
+    <h2>Input description</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>The inputs expected form the user are the Petal length and Sepal width of the flower whose species we want to predict.</li>
+<li>These inputs have been modeled as sliders, that allow to choose values from a range that is assumed appropriate for the prediction to be effective.</li>
+</ul>
+
+<div style='text-align: center;'>
+    <img height='200' src='assets/input.png' />
+</div>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-4" style="background:;">
+  <hgroup>
+    <h2>Output description</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>Confirmation of the input values</li>
+<li>Predicted species</li>
+<li>Plot representing the <em>Iris dataset</em> and the user described flower</li>
+<li>The output gets refreshed everytime any of the inputs change</li>
+</ul>
+
+<div style='text-align: center;'>
+    <img height='380' src='assets/output.png' />
+</div>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title='Ambition'>
+         1
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title='The approach:'>
+         2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='Input description'>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='Output description'>
+         4
+      </a>
+    </li>
+  </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
 </body>
-</html>
+  <!-- Load Javascripts for Widgets -->
+  <script src="http://slidifylibraries2.googlecode.com/git/inst/libraries/widgets/interactive/js/ace/js/ace.js"></script>
+<script src="http://slidifylibraries2.googlecode.com/git/inst/libraries/widgets/interactive/js/opencpu-0.5.js"></script>
+<script src="http://slidifylibraries2.googlecode.com/git/inst/libraries/widgets/interactive/js/interactive.js"></script>
+
+  <!-- MathJax: Fall back to local if CDN offline but local image fonts are not supported (saves >100MB) -->
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [['$','$'], ['\\(','\\)']],
+        processEscapes: true
+      }
+    });
+  </script>
+  <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  <!-- <script src="https://c328740.ssl.cf1.rackcdn.com/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script> -->
+  <script>window.MathJax || document.write('<script type="text/x-mathjax-config">MathJax.Hub.Config({"HTML-CSS":{imageFont:null}});<\/script><script src="http://slidifylibraries2.googlecode.com/git/inst/libraries/widgets/mathjax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"><\/script>')
+</script>
+<script src="shared/shiny.js" type="text/javascript"></script>
+  <script src="shared/slider/js/jquery.slider.min.js"></script>
+  <script src="shared/bootstrap/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="shared/slider/css/jquery.slider.min.css"></link>
+  
+  <!-- LOAD HIGHLIGHTER JS FILES -->
+  <script src="http://slidifylibraries2.googlecode.com/git/inst/libraries/highlighters/highlight.js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
+   
+  </html>

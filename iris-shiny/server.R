@@ -13,7 +13,7 @@ shinyServer(function(input, output) {
     
     
     ## load iris data
-    #load(iris)    
+    data(iris)    
     names(iris) = gsub("\\.", "", names(iris))
     
     # Testing model accuraccy within the dataset
